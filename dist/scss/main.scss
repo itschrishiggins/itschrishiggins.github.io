@@ -1,0 +1,25 @@
+@import 'base/variables';
+@import 'base/mixins';
+@import 'layouts/navbar';
+@import 'layouts/intro';
+@import 'layouts/about';
+@import 'layouts/projects';
+@import 'layouts/skills';
+@import 'layouts/contact';
+@import 'layouts/footer';
+
+/* Global styles */
+html,
+body {
+  font-size: 16px;
+  font-family: 'General Sans', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
+  background-color: $background;
+  scroll-behavior: smooth;
+}
+
+.main-section {
+  overflow-x: hidden;
+}

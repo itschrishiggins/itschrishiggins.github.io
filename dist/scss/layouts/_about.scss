@@ -1,0 +1,31 @@
+.about {
+    color: $primary;
+    padding: 0 1rem;
+    @include title;
+  
+    &__text {
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+      color: white;
+      font-weight: 300;
+  
+      a {
+        color: $primary;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+        font-weight: 700;
+  
+        &:hover {
+          color: lighten($primary, 20%);
+        }
+      }
+    }
+  
+    @include media-md {
+      padding: 0 4rem;
+    }
+
+    @include media-lg {
+      padding: 0 10rem;
+    }
+  }

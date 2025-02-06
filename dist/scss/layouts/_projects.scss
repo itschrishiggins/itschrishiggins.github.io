@@ -1,0 +1,107 @@
+.projects {
+  @include title;
+  padding: 0 1rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__card {
+    background-color: $background;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 100%;
+    flex: 1 0 calc(33.33% - 20px); 
+    max-width: calc(33.33% - 20px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+
+  &__card-description {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__card-link {
+    color: white;
+    text-decoration: none;
+    background-color: $primary;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    padding: 5px;
+
+    &:hover {
+      color: white;
+      background-color: darken($primary, 5%);
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__card {
+      flex-basis: calc(50% - 20px);
+      max-width: calc(50% - 20px);
+    }
+
+    &__card-description {
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__card {
+      flex-basis: calc(33.33% - 20px);
+      max-width: calc(33.33% - 20px);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    &__card-title {
+      font-size: 1.2rem;
+    }
+  
+    &__card-description {
+      font-size: 0.92rem;
+    }
+  }
+}
