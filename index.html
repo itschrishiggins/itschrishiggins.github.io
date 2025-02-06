@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chris Higgins Portfolio</title>
   <link rel="stylesheet" href="scss/main.css">
@@ -10,7 +11,6 @@
   <!-- AOS animations CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -41,175 +41,176 @@
     <!-- Intro section -->
     <section class="intro" data-aos="zoom-in-up" data-aos-delay="500">
       <div class="intro__wrapper">
-        <h1 class="intro__title">Hello! I'm <span class="csharp">C#</span><span class="rest">RIS.</span>
-          <p class="intro__text">Full-Stack Software Developer</p>
+        <h1 class="intro__title">Hello! I'm <span class="intro__title-name">Chris.</span></h1>
+        <p class="intro__text">Full-Stack Software Developer
+        </p>
       </div>
       <div class="intro__arrow">
-        <div class="intro__arrow-text">Find out more about me</div>
-        <div class="intro__arrow-icon">&#x25BC;</div>
+        <div class="intro__arrow-text">Find out more about me
+        </div>
+        <div class="intro__arrow-icon">&#x25BC;
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about" id="about" data-aos="fade-up" data-aos-delay="300">
+      <div class="about__wrapper">
+        <h2 class="about__title">About me</h2>
+      </div>
+      <p class="about__text">Hi there, I'm Chris. I'm a software developer with around two years of professional
+        experience,
+        focused on building applications and improving business workflows. I earned a First-Class Honours Higher Diploma
+        in Computing
+        from ATU Sligo, where I developed a strong foundation in web development, programming, and databases.
+
+      <p class="about__text">
+        In my current role, I've worked on modernizing systems, creating user-friendly dashboards, and automating
+        workflows to streamline
+        processes. My technical expertise includes C#, Python, JavaScript, SQL, and frameworks like .NET and Kendo UI.
+        I enjoy tackling challenges and delivering solutions that make a real impact.
+      </p>
+
+      <p class="about__text">
+        If you're looking for a developer who's passionate about technology and creating effective solutions, feel free
+        to <a href="#contact">get in touch!</a>.
+      </p>
+    </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects" data-aos="fade-up" data-aos-delay="300">
+      <div class="projects__wrapper">
+        <h2 class="projects__title">My recent work</h2>
+      </div>
+      <div class="projects__container">
+        <div class="projects__card">
+          <img class="projects__card-image" src="img/pokedbPikachu.png">
+          <h2 class="projects__card-title">Pokédex Web App</h2>
+          <p class="projects__card-description">ASP.NET app - consumes custom API to display data for
+            the original 151 Pokémon & create, edit & delete Trainer Cards</p>
+          <div class="projects__card-links">
+            <a class="projects__card-link" target="_blank" href="https://youtu.be/43qKxtgslks">VIDEO ></a>
+            <a class="projects__card-link" target="_blank" href="https://github.com/chrishiggins54/PokemonDB_MVC">CODE
+              ></a>
+          </div>
+        </div>
+        <div class="projects__card">
+          <img class="projects__card-image" src="img/gameDB.png">
+          <h2 class="projects__card-title">Serverless Game Database</h2>
+          <p class="projects__card-description">Serverless site to upload/query JSON data using AWS services
+            including S3, DynamoDB & Lambda (using Python)</p>
+          <div class="projects__card-links">
+            <a class="projects__card-link" target="_blank" href="https://master.dg5v96zs58n1p.amplifyapp.com/">SITE
+              ></a>
+            <a class="projects__card-link" target="_blank"
+              href="https://github.com/chrishiggins54/video-game-database">CODE ></a>
+          </div>
+        </div>
+        <div class="projects__card">
+          <img class="projects__card-image" src="img/beachHouse.png">
+          <h2 class="projects__card-title">Band Website</h2>
+          <p class="projects__card-description">Fan website built using HTML/CSS, JavaScript, jQuery, Flexbox and
+            Bootstrap</p>
+          <div class="projects__card-links">
+            <a class="projects__card-link" target="_blank" href="https://beachhouse.azurewebsites.net/">SITE ></a>
+            <a class="projects__card-link" target="_blank"
+              href="https://github.com/chrishiggins54/beach-house-site">CODE ></a>
+          </div>
+        </div>
+        <div class="projects__card">
+          <img class="projects__card-image" src="img/gamerental.png">
+          <h2 class="projects__card-title">Gaming Console Rental App</h2>
+          <p class="projects__card-description">C# WPF App to rent gaming consoles. Connects to SQL Server Database.
+            Used LINQ to query/update database</p>
+          <a class="projects__card-link" target="_blank"
+            href="https://github.com/chrishiggins54/Consoles-Renting-App">CODE ></a>
+        </div>
+        <div class="projects__card">
+          <img class="projects__card-image" src="img/ward.png">
+          <h2 class="projects__card-title">Hospital Ward App</h2>
+          <p class="projects__card-description">C# WPF app with GUI to create wards with patients lists. Features JSON
+            load/save functionality</p>
+          <a class="projects__card-link" target="_blank" href="https://github.com/chrishiggins54/Hospital-Ward-App">CODE
+            ></a>
+        </div>
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills" data-aos="fade-up" id="skills" data-aos-delay="300">
+      <div class="skills__wrapper">
+        <h2 class="skills__title">My top skills</h2>
+      </div>
+      <div class="skills__container">
+        <div class="skills__card">
+          <i class="devicon-csharp-plain"></i>
+          <h3 class="skills__card-title">C#</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-python-plain"></i>
+          <h3 class="skills__card-title">Python</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-javascript-plain"></i>
+          <h3 class="skills__card-title">Javascript</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-html5-plain"></i>
+          <h3 class="skills__card-title">HTML 5</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-css3-plain"></i>
+          <h3 class="skills__card-title">CSS</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-sass-original"></i>
+          <h3 class="skills__card-title">Sass</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-bootstrap-plain"></i>
+          <h3 class="skills__card-title">Bootstrap</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-mongodb-plain"></i>
+          <h3 class="skills__card-title">MongoDB</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-microsoftsqlserver-plain"></i>
+          <h3 class="skills__card-title">MS SQL Server</h3>
+        </div>
+        <div class="skills__card">
+          <i class="devicon-amazonwebservices-plain"></i>
+          <h3 class="skills__card-title">AWS</h3>
+        </div>
       </div>
     </section>
-  </section>
 
-  <!-- About section -->
-  <section class="about" id="about" data-aos="fade-up" data-aos-delay="300">
-    <div class="about__wrapper">
-      <h2 class="about__title">About me</h2>
-    </div>
-    <p class="about__text">Hi there, I'm Chris. I'm a software developer with around two years of professional
-      experience,
-      focused on building applications and improving business workflows. I earned a First-Class Honours Higher Diploma
-      in Computing
-      from ATU Sligo, where I developed a strong foundation in web development, programming, and databases.
-
-    <p class="about__text">
-      In my current role, I've worked on modernizing systems, creating user-friendly dashboards, and automating
-      workflows to streamline
-      processes. My technical expertise includes C#, Python, JavaScript, SQL, and frameworks like .NET and Kendo UI.
-      I enjoy tackling challenges and delivering solutions that make a real impact.
-    </p>
-
-    <p class="about__text">
-      If you're looking for a developer who's passionate about technology and creating effective solutions, feel free
-      to <a href="#contact">get in touch!</a>.
-    </p>
-  </section>
-
-  <!-- Projects section -->
-  <section class="projects" id="projects" data-aos="fade-up" data-aos-delay="300">
-    <div class="projects__wrapper">
-      <h2 class="projects__title">My recent work</h2>
-    </div>
-    <div class="projects__container">
-      <div class="projects__card">
-        <img class="projects__card-image" src="img/pokedbPikachu.png">
-        <h2 class="projects__card-title">Pokédex Web App</h2>
-        <p class="projects__card-description">ASP.NET app - consumes custom API to display data for
-          the original 151 Pokémon & create, edit & delete Trainer Cards</p>
-        <div class="projects__card-links">
-          <a class="projects__card-link" target="_blank" href="https://youtu.be/43qKxtgslks">VIDEO ></a>
-          <a class="projects__card-link" target="_blank" href="https://github.com/chrishiggins54/PokemonDB_MVC">CODE
-            ></a>
+    <!-- Contact section -->
+    <section class="contact" id="contact" data-aos="fade-right" data-aos-delay="300">
+      <div class="contact__wrapper">
+        <h2 class="contact__title">Contact me</h2>
+      </div>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xpzedelw" method="POST">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field"
+                required />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
+                required />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
+                class="input-field" required></textarea>
+            </div>
+            <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
+          </form>
         </div>
       </div>
-      <div class="projects__card">
-        <img class="projects__card-image" src="img/gameDB.png">
-        <h2 class="projects__card-title">Serverless Game Database</h2>
-        <p class="projects__card-description">Serverless site to upload/query JSON data using AWS services
-          including S3, DynamoDB & Lambda (using Python)</p>
-        <div class="projects__card-links">
-          <a class="projects__card-link" target="_blank" href="https://master.dg5v96zs58n1p.amplifyapp.com/">SITE
-            ></a>
-          <a class="projects__card-link" target="_blank"
-            href="https://github.com/chrishiggins54/video-game-database">CODE ></a>
-        </div>
-      </div>
-      <div class="projects__card">
-        <img class="projects__card-image" src="img/beachHouse.png">
-        <h2 class="projects__card-title">Band Website</h2>
-        <p class="projects__card-description">Fan website built using HTML/CSS, JavaScript, jQuery, Flexbox and
-          Bootstrap</p>
-        <div class="projects__card-links">
-          <a class="projects__card-link" target="_blank" href="https://beachhouse.azurewebsites.net/">SITE ></a>
-          <a class="projects__card-link" target="_blank" href="https://github.com/chrishiggins54/beach-house-site">CODE
-            ></a>
-        </div>
-      </div>
-      <div class="projects__card">
-        <img class="projects__card-image" src="img/gamerental.png">
-        <h2 class="projects__card-title">Gaming Console Rental App</h2>
-        <p class="projects__card-description">C# WPF App to rent gaming consoles. Connects to SQL Server Database.
-          Used LINQ to query/update database</p>
-        <a class="projects__card-link" target="_blank"
-          href="https://github.com/chrishiggins54/Consoles-Renting-App">CODE ></a>
-      </div>
-      <div class="projects__card">
-        <img class="projects__card-image" src="img/ward.png">
-        <h2 class="projects__card-title">Hospital Ward App</h2>
-        <p class="projects__card-description">C# WPF app with GUI to create wards with patients lists. Features JSON
-          load/save functionality</p>
-        <a class="projects__card-link" target="_blank" href="https://github.com/chrishiggins54/Hospital-Ward-App">CODE
-          ></a>
-      </div>
-  </section>
-
-  <!-- Skills section -->
-  <section class="skills" data-aos="fade-up" id="skills" data-aos-delay="300">
-    <div class="skills__wrapper">
-      <h2 class="skills__title">My top skills</h2>
-    </div>
-    <div class="skills__container">
-      <div class="skills__card">
-        <i class="devicon-csharp-plain"></i>
-        <h3 class="skills__card-title">C#</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-python-plain"></i>
-        <h3 class="skills__card-title">Python</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-javascript-plain"></i>
-        <h3 class="skills__card-title">Javascript</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-html5-plain"></i>
-        <h3 class="skills__card-title">HTML 5</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-css3-plain"></i>
-        <h3 class="skills__card-title">CSS</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-sass-original"></i>
-        <h3 class="skills__card-title">Sass</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-bootstrap-plain"></i>
-        <h3 class="skills__card-title">Bootstrap</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-mongodb-plain"></i>
-        <h3 class="skills__card-title">MongoDB</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-microsoftsqlserver-plain"></i>
-        <h3 class="skills__card-title">MS SQL Server</h3>
-      </div>
-      <div class="skills__card">
-        <i class="devicon-amazonwebservices-plain"></i>
-        <h3 class="skills__card-title">AWS</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact section -->
-  <section class="contact" id="contact" data-aos="fade-right" data-aos-delay="300">
-    <div class="contact__wrapper">
-      <h2 class="contact__title">Contact me</h2>
-    </div>
-    <div class="contact-form-container">
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xpzedelw" method="POST">
-          <div class="form-control">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field"
-              required />
-          </div>
-          <div class="form-control">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
-              required />
-          </div>
-          <div class="form-control">
-            <label for="message">Message</label>
-            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
-              class="input-field" required></textarea>
-          </div>
-          <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
   </section>
 
   <!-- Footer -->

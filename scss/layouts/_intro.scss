@@ -1,29 +1,4 @@
 /* Introduction section */
-.title {
-  font-size: 3.5rem;
-}
-.csharp {
-  color: #ff4f4f;
-  font-weight: 800;
-  font-style: italic;
-  color: #ff4f4f; /* Highlighted C# color */
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  background: rgba(255, 79, 79, 0.2);
-  border-radius: 5px;
-}
-.rest {
-  color: white;
-  font-weight: 200;
-  font-style: italic;
-}
-.subtitle {
-  font-size: 1.5rem;
-  color: #ff4f4f;
-  margin-top: 10px;
-  font-family: "JetBrains Mono", monospace;
-}
-
 .intro {
   flex-direction: column;
   @include flex-center;
