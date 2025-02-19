@@ -255,7 +255,7 @@ body {
 }
 .projects-container .projects-section .project .project-info .project-title {
   font-size: 1.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-family: "SourceCode Pro", monospace;
 }
 .projects-container .projects-section .project .project-info .project-description {
@@ -362,7 +362,7 @@ body {
 }
 @media (max-width: 768px) {
   .projects-container .projects-section {
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .projects-container .project {
     flex-direction: column !important;
@@ -385,7 +385,7 @@ body {
     padding: 1rem !important;
   }
   .projects-container .project .project-info .project-title {
-    font-size: 1.2rem !important;
+    font-size: 1.33rem !important;
     margin-bottom: 1rem !important;
   }
   .projects-container .project .project-info .project-description {
@@ -421,7 +421,7 @@ body {
 .expertise-container .expertise-tiles .tile {
   border: 1px solid #181818;
   color: #181818;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 1rem;
   text-align: center;
@@ -433,6 +433,13 @@ body {
   width: auto;
   font-family: "SoureCode Pro", monospace;
 }
+@media (max-width: 768px) {
+  .expertise-container .expertise-tiles .tile {
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+}
 .expertise-container .expertise-tiles .tile i {
   font-size: 1.5rem;
   margin-right: 0.5rem;
@@ -443,11 +450,6 @@ body {
 .expertise-container .expertise-tiles .tile:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 768px) {
-  .expertise-container {
-    text-align: center;
-  }
 }
 
 .experience-container {

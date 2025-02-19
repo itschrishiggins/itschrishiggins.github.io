@@ -12,7 +12,7 @@
     .tile {
       border: 1px solid $text-color;
       color: $text-color;
-      padding: 1rem 2rem;
+      padding: 0.5rem 1rem;
       border-radius: 5px;
       font-size: 1rem;
       text-align: center;
@@ -23,6 +23,12 @@
       height: 50px;
       width: auto;
       font-family: "SoureCode Pro", monospace;
+
+      @media (max-width: 768px) {
+        padding: 0.4rem 0.8rem;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
 
       i {
         font-size: 1.5rem;
@@ -38,9 +44,5 @@
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
       }
     }
-  }
-
-  @media (max-width: 768px) {
-    text-align: center;
   }
 }
