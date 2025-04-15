@@ -170,10 +170,84 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const applySliderGlitch = (selector, delay, infinite = false) => {
+    setTimeout(() => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.style.opacity = '1';
+        PowerGlitch.glitch(selector, {
+          playMode: 'always',
+          createContainers: true,
+          hideOverflow: true,
+          timing: {
+            duration: 2500,
+            iterations: infinite ? Infinity : 1,
+          },
+          glitchTimeSpan: {
+            start: 0,
+            end: 0.5,
+          },
+          shake: {
+            velocity: infinite ? 80 : 15,
+            amplitudeX: infinite ? 0.5 : 0.2,
+            amplitudeY: infinite ? 0.5 : 0.2,
+          },
+          slice: {
+            count: infinite ? 60 : 6,
+            velocity: 15,
+            minHeight: 0.02,
+            maxHeight: 0.15,
+            hueRotate: true,
+          },
+          pulse: false,
+        });
+      }
+    }, delay);
+  };
+
   const sliders = document.querySelectorAll('.project-image-slider');
+  
   sliders.forEach(slider => {
     const slides = slider.querySelectorAll('img');
     let currentIndex = 0;
+
+    const isPokeDBSlider = slider.classList.contains('pokedb-slider');
+
+    const handlePokeDBGlitch = (index) => {
+      const activeSlide = slides[index];
+      if (isPokeDBSlider) {
+        setTimeout(() => {
+          PowerGlitch.glitch(activeSlide, {
+            playMode: 'always',
+            createContainers: true,
+            hideOverflow: true,
+            timing: {
+              duration: 2500,
+              iterations: 1,
+            },
+            glitchTimeSpan: {
+              start: 0,
+              end: 0.7,
+            },
+            shake: {
+              velocity: 15,
+              amplitudeX: 0.2,
+              amplitudeY: 0.2,
+            },
+            slice: {
+              count: 6,
+              velocity: 15,
+              minHeight: 0.02,
+              maxHeight: 0.15,
+              hueRotate: true,
+            },
+            pulse: false,
+          });
+        }, 7000); 
+      } else {
+        applySliderGlitch(`#${activeSlide.id}`, 0);
+      }
+    };
 
     const showSlide = (index) => {
       slides.forEach((slide, i) => {
@@ -181,33 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.style.zIndex = i === index ? '1' : '0';
       });
 
-      const activeSlide = slides[index];
-      PowerGlitch.glitch(activeSlide, {
-        playMode: 'always',
-        createContainers: true,
-        hideOverflow: true,
-        timing: {
-          duration: 500,
-          iterations: 1,
-        },
-        glitchTimeSpan: {
-          start: 0,
-          end: 0.7,
-        },
-        shake: {
-          velocity: 15,
-          amplitudeX: 0.2,
-          amplitudeY: 0.2,
-        },
-        slice: {
-          count: 6,
-          velocity: 15,
-          minHeight: 0.02,
-          maxHeight: 0.15,
-          hueRotate: true,
-        },
-        pulse: false,
-      });
+      handlePokeDBGlitch(index);
     };
 
     showSlide(currentIndex);
@@ -215,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
       currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
       showSlide(currentIndex);
-    }, 4000);
+    }, 7000); 
   });
 });
 
